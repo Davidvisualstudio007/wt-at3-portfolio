@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | David Turangan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+
+  <!-- Validation logic lives in its own file (required by the brief). defer = run after HTML loads. -->
+  <script src="assets/js/contact.js" defer></script>
+</head>
+
+<body class="bg-newsprint text-ink font-body">
+
+  <!-- ===== HEADER (same as home) ===== -->
+  <header class="border-b-2 border-ink">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <i class="fa-solid fa-film text-accent text-2xl"></i>
+        <span class="font-display text-xl font-black tracking-tight">Davisual Studio</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="flex gap-4 text-sm uppercase tracking-wide">
+          <li><a href="index.html" class="hover:text-accent">Home</a></li>
+          <li><a href="projects.html" class="hover:text-accent">Projects</a></li>
+          <li><a href="contact.html" class="text-accent">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4">
+
+    <section class="py-10">
+      <h1 class="font-display text-4xl md:text-5xl font-black">Get in touch</h1>
+      <p class="mt-2 text-slate">Send a message and I'll get back to you.</p>
+
+      <!-- novalidate turns off the browser's built-in checks so our JS regex is in control -->
+      <form id="contact-form" novalidate class="mt-8 max-w-md border-2 border-ink p-6 bg-white">
+
+        <!-- NAME -->
+        <div class="mb-4">
+          <label for="name" class="block text-sm uppercase tracking-wide mb-1">Name</label>
+          <input id="name" name="name" type="text"
+                 class="w-full border border-ink px-3 py-2 bg-newsprint">
+          <p id="name-error" class="text-accent text-sm mt-1" aria-live="polite"></p>
+        </div>
+
+        <!-- EMAIL -->
+        <div class="mb-4">
+          <label for="email" class="block text-sm uppercase tracking-wide mb-1">Email</label>
+          <input id="email" name="email" type="text"
+                 class="w-full border border-ink px-3 py-2 bg-newsprint">
+          <p id="email-error" class="text-accent text-sm mt-1" aria-live="polite"></p>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="mb-4">
+          <label for="message" class="block text-sm uppercase tracking-wide mb-1">Message</label>
+          <textarea id="message" name="message" rows="4"
+                    class="w-full border border-ink px-3 py-2 bg-newsprint"></textarea>
+          <p id="message-error" class="text-accent text-sm mt-1" aria-live="polite"></p>
+        </div>
+
+        <!-- Button starts disabled, JS enables it once all fields are valid -->
+        <button id="submit-btn" type="submit" disabled
+                class="w-full border-2 border-ink bg-ink text-newsprint py-3 uppercase tracking-wide text-sm hover:bg-accent hover:border-accent disabled:opacity-40 disabled:cursor-not-allowed">
+          Send message
+        </button>
+
+        <p id="success" class="text-accent font-bold mt-3" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (same as home) ===== -->
+  <footer class="border-t-2 border-ink mt-8">
+    <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate">&copy; 2026 David Turangan. All rights reserved.</p>
+      <ul class="flex gap-4 text-sm uppercase tracking-wide">
+        <li><a href="about.html" class="hover:text-accent">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+        <li><a href="copyright.html" class="hover:text-accent">Copyright</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
