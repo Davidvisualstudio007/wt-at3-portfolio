@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Project | David Turangan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script src="assets/js/sample-project.js" defer></script>
+</head>
+<body class="bg-newsprint text-ink font-body">
+
+  <header class="border-b-2 border-ink">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2">
+        <i class="fa-solid fa-film text-accent text-2xl"></i>
+        <span class="font-display text-xl font-black tracking-tight">Davisual Studio</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="flex gap-4 text-sm uppercase tracking-wide">
+          <li><a href="index.html" class="hover:text-accent">Home</a></li>
+          <li><a href="projects.html" class="hover:text-accent">Projects</a></li>
+          <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-4">
+    <section class="py-10">
+      <h1 class="font-display text-4xl md:text-5xl font-black">Sample Project</h1>
+      <p class="mt-2 text-slate">A small app that fetches live data from the API Ninjas service.</p>
+
+      <form id="apiForm" class="mt-8 max-w-lg border-2 border-ink p-6 bg-white">
+
+        <!-- Pick which API to call -->
+        <fieldset class="mb-4">
+          <legend class="text-sm uppercase tracking-wide mb-2">Choose an API</legend>
+          <label class="flex items-center gap-2 mb-1">
+            <input type="checkbox" name="api" value="dictionary" id="apiQuotes"> Dictionary
+          </label>
+          <label class="flex items-center gap-2">
+            <input type="checkbox" name="api" value="dadjokes" id="apiJokes"> Dad Jokes
+          </label>
+        </fieldset>
+
+        <!-- User input -->
+        <fieldset class="mb-4">
+          <label for="userInput" class="block text-sm uppercase tracking-wide mb-1">Your input</label>
+          <input type="text" id="userInput" placeholder="Pick an API above first"
+                 class="w-full border border-ink px-3 py-2 bg-newsprint focus:outline-none focus:border-accent">
+        </fieldset>
+
+        <button id="sendBtn" type="submit"
+                class="w-full border-2 border-ink bg-ink text-newsprint py-3 uppercase tracking-wide text-sm hover:bg-accent hover:border-accent">
+          Send
+        </button>
+      </form>
+
+      <!-- Where the API answer is shown -->
+      <output id="responseArea" class="block mt-6 max-w-lg border-2 border-ink p-4 bg-white">
+        <p>Response will appear here.</p>
+      </output>
+    </section>
+  </main>
+
+  <footer class="border-t-2 border-ink mt-8">
+    <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-sm text-slate">&copy; 2026 David Turangan. All rights reserved.</p>
+      <ul class="flex gap-4 text-sm uppercase tracking-wide">
+        <li><a href="about.html" class="hover:text-accent">About</a></li>
+        <li><a href="contact.html" class="hover:text-accent">Contact</a></li>
+        <li><a href="copyright.html" class="hover:text-accent">Copyright</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
