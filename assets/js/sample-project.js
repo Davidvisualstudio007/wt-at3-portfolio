@@ -39,7 +39,7 @@ sendBtn.addEventListener('click', (event) => {
   event.preventDefault();
   responseArea.innerHTML = '<p>Loading...</p>';
 
-  let url = '';
+  let url;
   if (apiQuotes.checked) {
     if (!userInput.value.trim()) {
       responseArea.innerHTML = '<p>Please enter a word first.</p>';
